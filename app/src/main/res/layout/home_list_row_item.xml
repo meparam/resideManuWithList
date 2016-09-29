@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/feed_item_margin"
+        android:layout_marginRight="@dimen/feed_item_margin"
+        android:layout_marginTop="@dimen/feed_item_margin"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_parent_rounded_corner"
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/feed_item_padding_left_right"
+            android:paddingRight="@dimen/feed_item_padding_left_right" >
+
+            <ImageView
+                android:id="@+id/homelist_profilepic"
+                android:layout_width="70dp"
+                android:layout_height="75dp"
+                android:layout_margin="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/namde"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/feed_item_profile_name"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hoelisttimestamp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".7"
+                        android:gravity="right"
+
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/feed_item_timestamp"
+                        android:textColor="@color/colorPrimary"
+                        />
+                </LinearLayout>
+                <TextView
+
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/feed_item_timestamp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/timesdtamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:autoLink="all"
+                android:text="hello"
+
+                android:textSize="@dimen/feed_item_timestamp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/feed_item_padding_left_right"
+            android:textSize="@dimen/feed_item_timestamp" />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pagerlist"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="#fff"
+            />
+        <app.num.residemenu.circleindicator.CirclePageIndicator
+            android:id="@+id/indicatorlist"
+            android:padding="10dip"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="@dimen/feed_item_profile_info_padd"
+            android:paddingTop="@dimen/padding_top"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/favorite_png" />
+
+            <TextSwitcher
+                android:id="@+id/tsLikesCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:inAnimation="@anim/slide_in_likes_counter"
+                android:outAnimation="@anim/slide_out_likes_counter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary" />
+            </TextSwitcher>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/feed_item_profile_info_padd"
+            android:paddingTop="@dimen/padding_top"
+            >
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/favorite_png"
+                android:id="@+id/imageView" />
+            <TextView
+                android:id="@+id/likeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="5dp"
+                android:text=" "
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:paddingTop="@dimen/padding_top" />
+        <TextView
+            android:id="@+id/likeCotttunt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="5dp"
+            android:text=""
+            android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+            android:paddingRight="@dimen/feed_item_status_pad_left_right"
+            android:paddingTop="@dimen/padding_top" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingLeft="@dimen/feed_item_profile_info_padd"
+            android:paddingTop="@dimen/padding_top"
+            >
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/comment_png"
+                android:id="@+id/imageView1" />
+
+            <TextView
+                android:id="@+id/txtdescMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:paddingTop="@dimen/padding_top" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/purchaseditems"
+                android:id="@+id/imageView12" />
+
+            <TextView
+                android:id="@+id/prodSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:paddingTop="@dimen/padding_top" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/padding_top"
+            android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/nav_solditems"
+                android:id="@+id/imageView13" />
+
+            <TextView
+                android:id="@+id/homelistbaseprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:paddingTop="@dimen/padding_top" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingTop="2dp"
+            android:gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/favorite_png"
+                android:id="@+id/listlike" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_speechbubble"
+                android:id="@+id/listcomment" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/share"
+                android:id="@+id/homelistshare" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/option_menu"
+                android:id="@+id/homelistoption" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1.6"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Buy"
+                android:layout_marginRight="8dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+
+                android:background="#4CAF50"
+                android:id="@+id/listBuy" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item_bookmark"
+        android:showAsAction="ifRoom|withText"
+        android:title="Add bookmark"
+        android:visible="true"/>
+    <!--<item-->
+        <!--android:id="@+id/item_music"-->
+        <!--android:showAsAction="ifRoom|withText"-->
+        <!--android:title="Music"-->
+        <!--android:visible="true"/>-->
+    <item
+        android:id="@+id/item_report_product"
+        android:showAsAction="ifRoom|withText"
+        android:title="Report product"
+        android:visible="true"/>
+
+
+    <item
+        android:id="@+id/item_chat"
+        android:showAsAction="ifRoom|withText"
+        android:title="Private Chat"
+        android:visible="true"/>
+
+</menu>
